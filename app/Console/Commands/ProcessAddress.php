@@ -49,7 +49,6 @@ class ProcessAddress extends Command
      */
     public function handle()
     {
-$count_time = microtime(true);
         $address_dir = base_path() . '/address/';
 
         if (!file_exists($address_dir)) {
@@ -60,7 +59,7 @@ $count_time = microtime(true);
 
         $this->insertCityAndAreaData($city_path[0]);
         $this->insertStreetData($street_path);
-echo "Time Used: " . (microtime(true) - $count_time) . "s";
+
         return 0;
     }
 
