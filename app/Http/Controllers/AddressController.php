@@ -76,10 +76,10 @@ class AddressController extends Controller
             'city' => $address['city'], 
             'area' => $address['area'], 
             'road' => $address['road'], 
-            'lane' => isset($address['lane']) && !empty($address['lane']) ? (int)$address['lane'] : '', 
-            'alley' => isset($address['alley']) && !empty($address['alley']) ? (int)$address['alley'] : '', 
-            'no' => isset($address['no']) && !empty($address['no']) ? (int)$address['no'] : '', 
-            'floor' => isset($address['floor']) && !empty($address['floor']) ? (int)$address['floor'] : '', 
+            'lane' => isset($address['lane']) && !empty($address['lane']) ? (int)$address['lane'] : 0, 
+            'alley' => isset($address['alley']) && !empty($address['alley']) ? (int)$address['alley'] : 0, 
+            'no' => isset($address['no']) && !empty($address['no']) ? (int)$address['no'] : 0, 
+            'floor' => isset($address['floor']) && !empty($address['floor']) ? (int)$address['floor'] : 0, 
             'address' => '', 
             'filename' => $this->area
                                ->where([
